@@ -21,7 +21,9 @@ public class SigninActivity extends AppCompatActivity {
         pass = findViewById(R.id.password);
         b_signin =(AppCompatButton) findViewById(R.id.bt_signin);
 
-
+        Intent intent =getIntent();
+        String usernameS = intent.getStringExtra("username");
+        String passwordS = intent.getStringExtra("password");
         b_signin.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
