@@ -26,6 +26,7 @@ public class SignupActivity extends AppCompatActivity {
         password =findViewById(R.id.signuppassword);
         button =(AppCompatButton) findViewById(R.id.b_signup);
         button.setOnClickListener(new View.OnClickListener(){
+
             @Override
             public void onClick(View v){
                 openActivity2();
@@ -34,6 +35,7 @@ public class SignupActivity extends AppCompatActivity {
     }
     public void openActivity2(){
         Intent intent = new Intent(this, SigninActivity.class);
+
         startActivity(intent);
     }
 }

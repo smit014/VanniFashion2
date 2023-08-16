@@ -20,6 +20,8 @@ public class SigninActivity extends AppCompatActivity {
         susername =findViewById(R.id.username);
         pass = findViewById(R.id.password);
         b_signin =(AppCompatButton) findViewById(R.id.bt_signin);
+
+
         b_signin.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
