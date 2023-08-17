@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
                 R.drawable.banarasi2,R.drawable.banarasi2,R.drawable.banarasi2};
 
         GridAdapter gridAdapter = new GridAdapter(MainActivity.this,sareeName,sareeImages);
-//         binding.gridView.setAdapter(gridAdapter);
+//        binding.gridView.setA(gridAdapter);
 
 
 
