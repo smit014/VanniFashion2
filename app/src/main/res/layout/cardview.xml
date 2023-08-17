@@ -16,10 +16,10 @@
     <ImageView
         android:id="@+id/itemImg"
         android:layout_width="match_parent"
-        android:layout_height="649dp"
+        android:layout_height="400dp"
         android:layout_gravity=""
         android:layout_marginTop="15dp"
-        android:src="@drawable/banarasi2" />
+        android:src="@drawable/s2" />
 
     <TextView
         android:id="@+id/itemText"
@@ -30,7 +30,8 @@
         android:fontFamily="@font/akaya_telivigala"
         android:textColor="@color/black"
         android:textSize="24sp"
-        android:layout_marginTop="10dp"
+        android:layout_marginStart=""
+        android:layout_marginTop=""
         android:gravity="center"
         android:layout_gravity="bottom"
 

@@ -19,7 +19,7 @@
             android:id="@+id/vanni"
             android:layout_width="0dp"
             android:layout_height="42dp"
-            android:layout_marginStart="18dp"
+            android:layout_marginStart="35dp"
             android:layout_marginTop="40dp"
             android:fontFamily="@font/poppins_semibold"
             android:text="VANNI"
@@ -33,9 +33,10 @@
             android:layout_height="wrap_content"
             android:id="@+id/desc"
             android:text=" Fashion"
+            android:fontFamily="@font/akaya_telivigala"
             android:textSize="16sp"
             android:textColor="@color/GREEN2"
-            android:layout_marginStart="18dp"
+            android:layout_marginStart="35dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/vanni"
             app:layout_constraintEnd_toStartOf="@id/logoImage"/>
@@ -54,9 +55,8 @@
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@+id/logoImage"
             android:columnCount="2"
-            android:id="@+id/gridview"
-            >
-        </GridLayout>
+            android:id="@+id/gridView"
+            />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>
