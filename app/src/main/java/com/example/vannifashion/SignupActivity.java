@@ -37,7 +37,20 @@ public class SignupActivity extends AppCompatActivity {
         TextInputLayout passwordLayout =findViewById(R.id.passowrdLayout);
         AppCompatButton button = (AppCompatButton) findViewById(R.id.b_signup);
 
-        password.addTextChangedListener(new TextWatcher() {
+        button.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v){
+                checkDataEntered();
+                String text = username.getText().toString();
+                if (!text.isEmpty()){
+                    openActivity2();
+                }
+
+                openActivity2();
+            }
+        });
+       /** password.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -50,25 +63,25 @@ public class SignupActivity extends AppCompatActivity {
                     Pattern pattern = Pattern.compile("[^a-zA-Z0-9]");
                     Matcher matcher = pattern.matcher(pass);
                     boolean isPwdContainSpeChar =matcher.find();
+                    if(isPwdContainSpeChar){
+                        passwordLayout.setHelperText("Strong Password");
+                        passwordLayout.setError("");
+                    } else {
+                        passwordLayout.setHelperText("");
+                        passwordLayout.setError("Week password,Include minimum one Special char ");
+
+                    }
                 }else{
                     passwordLayout.setHelperText("Enter Minimum 8 char");
                     passwordLayout.setError((""));
                 }
             }
-
             @Override
             public void afterTextChanged(Editable s) {
 
             }
-        });
-        button.setOnClickListener(new View.OnClickListener(){
+        }); */
 
-            @Override
-            public void onClick(View v){
-                checkDataEntered();
-                openActivity2();
-            }
-        });
     }
     boolean isEmail(EditText text) {
         CharSequence email = text.getText().toString();

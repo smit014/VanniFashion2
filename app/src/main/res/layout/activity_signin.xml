@@ -37,6 +37,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text|textAutoComplete"
+            android:textColor="@color/black"
             android:textSize="24sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -56,6 +57,7 @@
         app:boxBackgroundColor="@color/LITEPINK"
         app:boxBackgroundMode="outline"
         app:boxStrokeColor="@color/pink"
+        app:boxStrokeErrorColor="#6A0B0B"
         app:endIconMode="password_toggle"
         app:endIconTint="@color/green"
         app:hintTextColor="@color/green"
@@ -69,6 +71,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text|textPassword|textAutoComplete"
+            android:textColor="@color/black"
             android:textSize="24sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
