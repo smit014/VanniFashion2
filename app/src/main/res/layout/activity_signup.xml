@@ -1,29 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:background="@drawable/bg3"
+    android:orientation="vertical"
     tools:context=".SignupActivity">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="160dp" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/userLayout"
         android:layout_width="334dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="118dp"
+        android:layout_height="65dp"
+
+        android:layout_gravity="center"
+
         android:hint="Username"
         android:textColorHint="@color/green"
-        app:boxStrokeColor="#FFFFFF"
+        app:boxBackgroundColor="@color/LITEPINK"
+
+        app:boxStrokeColor="@color/pink"
+        app:endIconMode="clear_text"
+        app:endIconTint="@color/green"
         app:hintTextColor="@color/green"
-        app:layout_constraintBottom_toTopOf="@+id/emailLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:startIconDrawable="@drawable/baseline_person_24">
+        app:startIconDrawable="@drawable/baseline_person_24"
+        app:startIconTint="@color/green">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/username"
+            android:id="@+id/signupusername"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text|textAutoComplete"
@@ -33,42 +45,53 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/emailLayout"
         android:layout_width="334dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="195dp"
+        android:layout_height="65dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
         android:hint="Email"
         android:textColorHint="@color/green"
-        app:boxStrokeColor="#FFFFFF"
-        app:hintTextColor="@color/green"
+        app:boxBackgroundColor="@color/LITEPINK"
 
-        app:layout_constraintBottom_toTopOf="@+id/nameLayout"
+        app:boxStrokeColor="@color/pink"
+
+        app:endIconMode="clear_text"
+        app:endIconTint="@color/green"
+        app:hintTextColor="@color/green"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:startIconDrawable="@drawable/baseline_person_24">
+        app:placeholderText="ex : abc@gmail.com"
+        app:placeholderTextColor="@color/GREEN2"
+        app:startIconDrawable="@drawable/baseline_email_24"
+        app:startIconTint="@color/green">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="text|textAutoComplete"
+            android:inputType="text|textEmailAddress"
             android:textSize="24sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/nameLayout"
         android:layout_width="334dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="273dp"
+        android:layout_height="65dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
         android:hint="Fullname"
         android:textColorHint="@color/green"
-        app:boxStrokeColor="#FFFFFF"
+        app:boxBackgroundColor="@color/LITEPINK"
+        app:boxStrokeColor="@color/pink"
+
+        app:endIconMode="clear_text"
+        app:endIconTint="@color/green"
         app:hintTextColor="@color/green"
-        app:layout_constraintTop_toBottomOf="@+id/userLayout"
-        app:layout_constraintBottom_toTopOf="@+id/passowrdLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:startIconDrawable="@drawable/baseline_person_24">
+        app:startIconDrawable="@drawable/baseline_create_24"
+        app:startIconTint="@color/green">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/name"
@@ -80,24 +103,37 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/passowrdLayout"
-        android:layout_width="334dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="285dp"
+        android:layout_width="338dp"
+        android:layout_height="98dp"
+
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
         android:hint="Password"
         android:textColorHint="@color/green"
-        app:boxStrokeColor="#FFFFFF"
+        app:boxBackgroundColor="@color/LITEPINK"
+        app:boxStrokeColor="@color/pink"
+
+        app:counterEnabled="true"
+        app:counterMaxLength="20"
+        app:counterTextColor="@color/green"
+        app:endIconMode="password_toggle"
+        app:endIconTint="@color/green"
+        app:errorEnabled="true"
+        app:helperText="Enter strong Password"
+        app:helperTextEnabled="true"
+        app:helperTextTextColor="@color/green"
         app:hintTextColor="@color/green"
-        app:layout_constraintTop_toBottomOf="@+id/nameLayout"
-        app:layout_constraintBottom_toTopOf="@+id/b_signup"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:startIconDrawable="@drawable/baseline_person_24">
+        app:passwordToggleTint="@color/green"
+        app:startIconDrawable="@drawable/baseline_lock_24"
+        app:startIconTint="@color/green">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/signuppassword"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="65dp"
             android:inputType="text|textPassword|textAutoComplete"
             android:textSize="24sp" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -106,6 +142,8 @@
         android:id="@+id/b_signup"
         android:layout_width="260dp"
         android:layout_height="61dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
         android:background="@drawable/bt_s1"
         android:text="Sign up"
         android:textColor="@color/LITEPINK"
@@ -139,7 +177,7 @@
     <LinearLayout
         android:id="@+id/socialicons"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_alignParentBottom="true"
         android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -170,4 +208,4 @@
 
     </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

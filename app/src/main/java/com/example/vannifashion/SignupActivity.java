@@ -5,12 +5,18 @@ import androidx.appcompat.widget.AppCompatButton;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
 import android.text.TextUtils;
+import android.text.TextWatcher;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
+
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class SignupActivity extends AppCompatActivity {
@@ -27,8 +33,34 @@ public class SignupActivity extends AppCompatActivity {
         username =findViewById(R.id.signupusername);
         email =findViewById(R.id.email);
         fullname =findViewById(R.id.name);
-        password =findViewById(R.id.signuppassword);
+        TextInputEditText password =findViewById(R.id.signuppassword);
+        TextInputLayout passwordLayout =findViewById(R.id.passowrdLayout);
         AppCompatButton button = (AppCompatButton) findViewById(R.id.b_signup);
+
+        password.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                String pass = s.toString();
+                if (pass.length() >= 8){
+                    Pattern pattern = Pattern.compile("[^a-zA-Z0-9]");
+                    Matcher matcher = pattern.matcher(pass);
+                    boolean isPwdContainSpeChar =matcher.find();
+                }else{
+                    passwordLayout.setHelperText("Enter Minimum 8 char");
+                    passwordLayout.setError((""));
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
         button.setOnClickListener(new View.OnClickListener(){
 
             @Override
