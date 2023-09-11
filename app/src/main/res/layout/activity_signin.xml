@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,40 +7,84 @@
     android:background="@drawable/bg1"
     tools:context=".SigninActivity">
 
-    <EditText
-        android:id="@+id/username"
-        android:layout_width="300dp"
-        android:layout_height="57dp"
-        android:gravity="center|left"
-        android:hint="Username"
-        android:autofillHints="username"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.661" />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/userLayout"
+        android:layout_width="334dp"
+        android:layout_height="65dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="240dp"
 
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="300dp"
-        android:layout_height="57dp"
-        android:gravity="center|left"
-        android:hint="Password"
-        android:autofillHints="password"
-        android:inputType="textPassword"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:hint="Username"
+        android:textColorHint="@color/green"
+        app:boxBackgroundColor="@color/LITEPINK"
+        app:boxBackgroundMode="outline"
+        app:boxStrokeColor="@color/pink"
+        app:endIconMode="clear_text"
+        app:endIconTint="@color/green"
+        app:hintTextColor="@color/green"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.772" />
+        app:startIconDrawable="@drawable/baseline_person_24"
+        app:startIconTint="@color/green">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text|textAutoComplete"
+            android:textColor="@color/black"
+            android:textSize="24sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passowrdLayout"
+        android:layout_width="334dp"
+        android:layout_height="65dp"
+
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="159dp"
+        android:hint="Password"
+        android:textColorHint="@color/green"
+        app:boxBackgroundColor="@color/LITEPINK"
+        app:boxBackgroundMode="outline"
+        app:boxStrokeColor="@color/pink"
+        app:boxStrokeErrorColor="#6A0B0B"
+        app:endIconMode="password_toggle"
+        app:endIconTint="@color/green"
+        app:hintTextColor="@color/green"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:startIconDrawable="@drawable/baseline_lock_24"
+        app:startIconTint="@color/green">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text|textPassword|textAutoComplete"
+            android:textColor="@color/black"
+            android:textSize="24sp" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/bt_signin"
         android:layout_width="260dp"
         android:layout_height="61dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="72dp"
+        android:layout_marginEnd="78dp"
+        android:layout_marginBottom="65dp"
         android:background="@drawable/bt_s1"
         android:text="Sign in"
         android:textColor="@color/LITEPINK"
@@ -52,4 +96,4 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.937" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

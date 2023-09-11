@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Vanni Fashion</string>
+    <string name="a_za_z0_9">[^a-zA-Z0-9]</string>
 </resources>
