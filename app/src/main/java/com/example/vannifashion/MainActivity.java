@@ -2,8 +2,7 @@ package com.example.vannifashion;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.AdapterView;
+import android.util.Log;
 import android.widget.GridView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,14 +22,14 @@ public class MainActivity extends AppCompatActivity {
 
         gridView = findViewById(R.id.gridview);
 
+        Intent intent = new Intent(MainActivity.this, ViewActivity.class);
+
         MySAdapter mysadapter = new MySAdapter(getApplicationContext(), R.layout.cardview, sarilist);
         gridView.setAdapter(mysadapter);
 
-        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                startActivity(new Intent(MainActivity.this, ViewActivity.class).putExtra("pos ", position));
-            }
+        gridView.setOnItemClickListener((parent, view, position, id) -> {
+            intent.putExtra("pos", position);
+            startActivity(intent);
         });
     }
 }
