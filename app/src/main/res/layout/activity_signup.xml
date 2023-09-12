@@ -13,6 +13,8 @@
         android:layout_width="match_parent"
         android:layout_height="160dp" />
 
+
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/userLayout"
         android:layout_width="334dp"
@@ -76,35 +78,6 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/nameLayout"
-        android:layout_width="334dp"
-        android:layout_height="65dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="15dp"
-        android:hint="Fullname"
-        android:textColorHint="@color/green"
-        app:boxBackgroundColor="@color/LITEPINK"
-        app:boxStrokeColor="@color/pink"
-
-        app:endIconMode="clear_text"
-        app:endIconTint="@color/green"
-        app:hintTextColor="@color/green"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:startIconDrawable="@drawable/baseline_create_24"
-        app:startIconTint="@color/green">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="text|textAutoComplete"
-            android:textColor="@color/black"
-            android:textSize="24sp" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/passowrdLayout"
         android:layout_width="338dp"
         android:layout_height="98dp"
@@ -146,12 +119,45 @@
             android:textSize="24sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/confirmpass"
+        android:layout_width="338dp"
+        android:layout_height="98dp"
+        app:startIconTint="@color/green"
+        android:layout_gravity="center"
+        android:layout_marginTop="0dp"
+        android:hint="Confirm Password"
+        android:textColorHint="@color/green"
+        app:boxBackgroundColor="@color/LITEPINK"
+        app:boxStrokeColor="@color/pink"
+        app:startIconDrawable="@drawable/baseline_lock_24"
+
+        app:boxStrokeErrorColor="#6A0C0C"
+        app:counterEnabled="true"
+        app:counterMaxLength="20"
+
+        app:counterTextColor="@color/green"
+        app:endIconMode="password_toggle"
+        app:endIconTint="@color/green"
+        app:errorEnabled="true"
+
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/confirmpasstext"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:inputType="text|textPassword|textAutoComplete"
+            android:textColor="@color/black"
+            android:textSize="24sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/b_signup"
         android:layout_width="260dp"
         android:layout_height="61dp"
         android:layout_gravity="center"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="60dp"
         android:background="@drawable/bt_s1"
         android:text="Sign up"
         android:textColor="@color/LITEPINK"
@@ -163,24 +169,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.765" />
 
-    <TextView
-        android:id="@+id/others"
-        android:layout_width="262dp"
-        android:layout_height="57dp"
-        android:layout_above="@id/socialicons"
-        android:layout_centerHorizontal="true"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:text="or sign in with"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.489"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.851" />
 
     <LinearLayout
         android:id="@+id/socialicons"
