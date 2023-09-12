@@ -11,9 +11,9 @@ public class MainActivity extends AppCompatActivity {
 
     GridView gridView;
 
-    String[] sarilist = {"banarasi ", "net ", "georgetta ", "kanjivaram ", "bandhani", "dola silk", "chiffon ", "silk ", "leheriya"};
+    String[] sarilist = {"banarasi ", "net ", "georgetta ", "kanjivaram ", "bandhani", "dola silk", "chiffon ", "silk ", "leheriya","kanchipuram","organza"};
 
-    public static int[] imglist = {R.drawable.banarasi1, R.drawable.net1, R.drawable.georgetta1, R.drawable.kanjivarm1, R.drawable.banarasi2, R.drawable.banarasi3, R.drawable.banarasi4, R.drawable.banarasi5, R.drawable.banarasi6};
+    public static int[] imglist = {R.drawable.banarasi1, R.drawable.net1, R.drawable.georgette2jpg, R.drawable.kanjivarm1, R.drawable.banarasi2, R.drawable.kanchipuram2, R.drawable.kanchipuram3, R.drawable.kanchipuram4, R.drawable.kanchipuram5,R.drawable.kanchipuram1,R.drawable.organza1};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
